@@ -27,11 +27,11 @@ function handleHoleClick(event) {
 
     if (hole.classList.contains('hole_has-mole')) {
         score++;
-        document.getElementById('score').textContent = score;
+        document.getElementById('dead').textContent = score; // Обновляем счётчик убитых кротов
         hole.classList.remove('hole_has-mole'); // Убираем крота
     } else {
         missed++;
-        document.getElementById('missed').textContent = missed;
+        document.getElementById('lost').textContent = missed; // Обновляем счётчик промахов
     }
 
     // Проверка на победу или поражение
@@ -48,8 +48,8 @@ function handleHoleClick(event) {
 function resetGame() {
     score = 0;
     missed = 0;
-    document.getElementById('score').textContent = score;
-    document.getElementById('missed').textContent = missed;
+    document.getElementById('dead').textContent = score; // Сбрасываем счётчик убитых кротов
+    document.getElementById('lost').textContent = missed; // Сбрасываем счётчик промахов
     clearInterval(moleTimer); // Останавливаем таймер
 }
 
