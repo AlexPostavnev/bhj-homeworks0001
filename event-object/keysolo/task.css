@@ -1,13 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 50px;
+}
+
+.word {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
 .symbol {
-  font-size: 50px;
+  display: inline-block;
+  padding: 5px;
+  border: 1px solid #ccc;
+  margin: 0 2px;
+}
+
+.symbol_current {
+  background-color: yellow;
 }
 
 .symbol_correct {
-  color: green;
+  background-color: lightgreen;
 }
 
 .word_incorrect {
-  background: red;
-  color: #fff;
+  background-color: lightcoral;
 }
 
+.status {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.timer {
+  font-size: 20px;
+  margin-top: 10px;
+}
